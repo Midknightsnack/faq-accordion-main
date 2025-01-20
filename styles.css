@@ -7,28 +7,18 @@ body{
 }
 
 .white-card{
-    /*struggling to do both*/
-    /* use for good functionality but for unintended design*/
-    width: 650px;
-    margin: 15% 25%;
+    /* CSS property is used to move an element horizontally and vertically by a specified percentage of its own size. 
+    It is often used to center an element both horizontally and vertically within its parent container.
+    For example, if you have a div element with a width and height of 200px, applying transform: translate(-50%, -50%); 
+    to it will move the div 50% to the left and 50% up, effectively centering it within its parent container. */
+    position: fixed;
+    width: 40%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     padding: 40px;
     border-radius: 20px;
     background-color: hsl(0, 0%, 100%);
-
-    /* use for ideal design but content won't make card change height*/
-    /* background-color: hsl(0, 0%, 100%);
-    border-radius: 20px;
-    margin: auto;
-    width: 600px;
-    height: 500px;
-    overflow: visible;
-    padding: 40px;
-
-    position: absolute;
-    top: 0; 
-    bottom: 0;
-    left: 0;
-    right: 0; */
 
     /* horizontal, vertical, blur, spread */
     box-shadow: 5px 20px 12px 5px hsla(292, 16%, 49%, 0.2);
@@ -52,7 +42,7 @@ body{
     font-weight: 700;
 }
 
-.faq-content .question-box{
+.question-box{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,34 +53,32 @@ body{
     cursor: pointer;
 }
 
-.faq-content .question{
+.question{
     color: hsl(292, 42%, 14%);
     font-size: 18px;
     font-weight: 700;
 }
 
-.faq-content .question-box .question:hover{
+.question:hover{
     color:hsl(293, 100%, 41%);
     cursor: pointer;
 }
 
-.faq-content .question-box .faq-button::after{
+.faq-button::after{
     content: url(assets/images/icon-plus.svg);
 }
 
-.faq-content .answer{
+.answer{
     color: hsl(292, 16%, 49%);
     padding: 20px 0px;
     display: none;
     overflow: visible;
 }
 
-
 .faq-content.active .faq-button::after {
     content: url(assets/images/icon-minus.svg);
-    transition: all 0.5s ease-out;
 }
+
 .faq-content.active .answer {
     display: block;
-    transition: all 0.5s ease-out;
 }
