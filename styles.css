@@ -3,7 +3,8 @@ body{
     font-family: "Work Sans", serif;
     background-image: url(assets/images/background-pattern-desktop.svg);
     background-repeat: no-repeat;
-    /*background-size: cover; /* use for ideal design / keeps the same width when screen size changes */
+    background-size: cover;
+    /*background-size: cover; /* use for ideal design / keeps the full width when screen size changes */
 }
 
 .white-card{
